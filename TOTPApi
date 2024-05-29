@@ -1,0 +1,21 @@
+package com.example;
+
+import static spark.Spark.*;
+
+public class TOTPApi {
+
+    public static void main(String[] args) {
+        // Set the port for the API server
+        port(4567);
+
+        // Define a GET route for the /totp endpoint
+        get("/totp", (req, res) -> {
+            // Create an instance of the TOTP class and return its class object
+            TOTP totp = new TOTP();
+            return totp.getClass();
+        });
+
+        // Print a message indicating that the TOTP API Server has started on port 4567
+        System.out.println("TOTP API Server started on port 4567");
+    }
+}
