@@ -1,0 +1,21 @@
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import com.example.TOTP;
+import org.testng.annotations.Test;
+
+public class TOTPTest {
+
+    // Test method to validate TOTP generation and validation
+    @Test
+    public void testValidTOTPGeneration() {
+        // Get the current system time in milliseconds
+        long timestamp = System.currentTimeMillis();
+        // Calculate the counter value based on the time period
+        long counter = timestamp / 1000 / TOTP.PERIOD;
+        // Generate the TOTP using the counter value
+        String otp = TOTP.generateTOTP(counter);
+
+        // Validate the generated TOTP against the expected value
+        assertTrue(TOTP.validateTOTP(otp, counter));
+    }
+}
