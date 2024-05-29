@@ -1,0 +1,30 @@
+Project Instructions:
+
+This project implements a simple API server in Java using the Spark framework to expose TOTP (Time-based One-Time Password) functionality.
+Usage:
+
+    Building the Project:
+        Clone the project repository to your local machine.
+        Ensure you have Java SE 8 or higher installed.
+        Use any Java IDE (e.g., IntelliJ IDEA, Eclipse) to open the project, or use command-line tools like Maven or Gradle to build the project.
+
+    Starting the API Server:
+        Run the TOTPApi class with the main method. This will start the API server on port 4567.
+
+    Accessing the API:
+        Once the server is running, you can access the API endpoints using an HTTP client or a web browser.
+
+    API Endpoints:
+        GET /totp: Retrieves the class object of the TOTP class. This endpoint demonstrates a basic usage of the Spark framework.
+
+Dependencies:
+
+    Java SE 8 or higher
+    Spark Framework
+
+Running Tests:
+
+This project does not include tests for the API server. However, you can manually test the API endpoints using an HTTP client or a web browser.
+License:
+
+This project is licensed under the MIT License. See the LICENSE file for details.
